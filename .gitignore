@@ -32,3 +32,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# domain setup docs (not for repository)
+CUSTOM_DOMAIN_SETUP.md
+DNS_RECORDS_QUICK_REFERENCE.md
+
