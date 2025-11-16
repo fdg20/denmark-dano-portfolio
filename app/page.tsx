@@ -2,26 +2,20 @@
 
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
-import Projects from '@/components/Projects'
-import About from '@/components/About'
-import Process from '@/components/Process'
-import Services from '@/components/Services'
-import Testimonials from '@/components/Testimonials'
-import FAQ from '@/components/FAQ'
+import HomeSkills from '@/components/HomeSkills'
+import HomeProjects from '@/components/HomeProjects'
+import HomeAbout from '@/components/HomeAbout'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-gray-900">
       <Navigation />
       <Hero />
-      <Projects />
-      <About />
-      <Process />
-      <Services />
-      <Testimonials />
-      <FAQ />
+      <HomeSkills />
+      <HomeProjects />
+      <HomeAbout />
       <Footer />
       <ScrollToTop />
     </main>
