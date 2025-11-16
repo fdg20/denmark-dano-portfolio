@@ -240,6 +240,7 @@ export default function ProjectsPage() {
                     alt={project.title}
                     fill
                     className="object-cover"
+                    style={{ height: '105%' }}
                     onError={(e) => {
                       const target = e.target as HTMLImageElement
                       target.style.display = 'none'
@@ -321,6 +322,7 @@ export default function ProjectsPage() {
                               alt={project.title}
                               fill
                               className="object-cover"
+                              style={{ height: '105%' }}
                             />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-6xl">

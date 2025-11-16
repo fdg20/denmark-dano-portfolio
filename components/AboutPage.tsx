@@ -201,6 +201,7 @@ export default function AboutPage() {
                   alt="Denmark L. Dano"
                   fill
                   className="object-cover"
+                  style={{ height: '105%' }}
                   onError={(e) => {
                     const target = e.target as HTMLImageElement
                     target.style.display = 'none'
