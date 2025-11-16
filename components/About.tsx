@@ -44,7 +44,7 @@ export default function About() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Meet Meily</h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              I'm Meily, a passionate Brand Identity & Package Designer based in tokyo. I specialize in crafting bold visual identities and packaging that captivate and inspire, blending creativity with strategy to elevate brands.
+              I&apos;m Meily, a passionate Brand Identity & Package Designer based in tokyo. I specialize in crafting bold visual identities and packaging that captivate and inspire, blending creativity with strategy to elevate brands.
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               {skills.map((skill, index) => (

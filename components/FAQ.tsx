@@ -55,7 +55,7 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm text-gray-500 mb-2">FAQ'S</p>
+          <p className="text-sm text-gray-500 mb-2">FAQ&apos;S</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Answers</h2>
           <p className="text-lg text-gray-600">
             Find answers to common questions about my design process, services etc…

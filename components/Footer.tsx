@@ -15,7 +15,7 @@ export default function Footer() {
         >
           <p className="text-sm text-gray-400 mb-4">Available For Work</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Curious about what we can create together? Let's bring something extraordinary to life!
+            Curious about what we can create together? Let&apos;s bring something extraordinary to life!
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
