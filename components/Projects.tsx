@@ -9,21 +9,22 @@ const projects = [
   { id: 4, title: 'Case Study', image: '/project-4.jpg' },
   { id: 5, title: 'Case Study', image: '/project-5.jpg' },
   { id: 6, title: 'Case Study', image: '/project-6.jpg' },
+  { id: 7, title: 'Case Study', image: '/project-7.jpg' },
+  { id: 8, title: 'Case Study', image: '/project-8.jpg' },
+  { id: 9, title: 'Case Study', image: '/project-9.jpg' },
 ]
 
 export default function Projects() {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold mb-16 text-center"
-        >
-          Projects
-        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {projects.map((project, index) => (
             <motion.div
@@ -45,10 +46,16 @@ export default function Projects() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button className="px-8 py-4 border-2 border-gray-300 rounded-full hover:bg-gray-50 transition-colors font-medium">
             All Projects
+          </button>
+          <button
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
+          >
+            Book a Free Call
           </button>
         </motion.div>
       </div>

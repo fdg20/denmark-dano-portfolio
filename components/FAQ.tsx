@@ -45,6 +45,13 @@ const faqs = [
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section id="faq" className="py-20 px-6 bg-gray-50">
       <div className="max-w-4xl mx-auto">
@@ -61,7 +68,7 @@ export default function FAQ() {
             Find answers to common questions about my design process, services etc…
           </p>
         </motion.div>
-        <div className="space-y-4">
+        <div className="space-y-4 mb-12">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -99,6 +106,19 @@ export default function FAQ() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <button
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
+          >
+            Book a Free Call
+          </button>
+        </motion.div>
       </div>
     </section>
   )

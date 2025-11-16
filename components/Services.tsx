@@ -16,7 +16,7 @@ const services = [
     description: 'Designing sleek, impactful packaging that not only looks stunning but also connects with your ideal customers — turning first impressions into lasting brand loyalty.',
   },
   {
-    title: 'Mockup Design',
+    title: 'Mochup Design',
     description: 'Tailored design mockups that align perfectly with your brand\'s aesthetic — because every detail matters when showcasing your product\'s true potential.',
   },
 ]
@@ -37,6 +37,20 @@ const additionalServices = [
 ]
 
 export default function Services() {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section id="services" className="py-20 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -72,7 +86,7 @@ export default function Services() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="flex flex-wrap gap-3 justify-center"
+          className="flex flex-wrap gap-3 justify-center mb-12"
         >
           {additionalServices.map((service, index) => (
             <span
@@ -82,6 +96,25 @@ export default function Services() {
               {service}
             </span>
           ))}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <button
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
+          >
+            Book a Free Call
+          </button>
+          <button
+            onClick={scrollToProjects}
+            className="px-8 py-4 border-2 border-gray-300 rounded-full hover:bg-gray-50 transition-colors font-medium"
+          >
+            See Projects
+          </button>
         </motion.div>
       </div>
     </section>

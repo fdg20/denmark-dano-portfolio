@@ -36,6 +36,20 @@ const stats = [
 ]
 
 export default function Testimonials() {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const scrollToServices = () => {
+    const element = document.getElementById('services')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section id="testimonials" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -67,7 +81,7 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -89,6 +103,25 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <button
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
+          >
+            Book a Free Call
+          </button>
+          <button
+            onClick={scrollToServices}
+            className="px-8 py-4 border-2 border-gray-300 rounded-full hover:bg-gray-50 transition-colors font-medium"
+          >
+            See Services
+          </button>
+        </motion.div>
       </div>
     </section>
   )

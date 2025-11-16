@@ -30,9 +30,9 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <div className="mb-4 md:mb-0">
+          <div>
             <a href="mailto:hello@framebase.design" className="text-gray-400 hover:text-white transition-colors">
               hello@framebase.design
             </a>

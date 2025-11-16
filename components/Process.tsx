@@ -21,6 +21,20 @@ const steps = [
 ]
 
 export default function Process() {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section id="process" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -37,7 +51,7 @@ export default function Process() {
             crafting bold visuals that inspire and elevate brands with thought process.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -55,6 +69,25 @@ export default function Process() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <button
+            onClick={scrollToContact}
+            className="px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
+          >
+            Book a Free Call
+          </button>
+          <button
+            onClick={scrollToProjects}
+            className="px-8 py-4 border-2 border-gray-300 rounded-full hover:bg-gray-50 transition-colors font-medium"
+          >
+            See Projects
+          </button>
+        </motion.div>
       </div>
     </section>
   )
